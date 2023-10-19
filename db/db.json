@@ -4,11 +4,15 @@
     "text": "Test text"
   },
   {
-    "title": "New Note",
-    "text": "Mowing"
-  },
-  {
     "title": "Check on my server",
     "text": "trash if needed"
+  },
+  {
+    "title": "Call the bank",
+    "text": "Where's my money!"
+  },
+  {
+    "title": "Pick up groceries",
+    "text": "Num nums"
   }
 ]
