@@ -2,5 +2,13 @@
   {
     "title": "Test Title",
     "text": "Test text"
+  },
+  {
+    "title": "New Note",
+    "text": "Mowing"
+  },
+  {
+    "title": "Check on my server",
+    "text": "trash if needed"
   }
 ]
