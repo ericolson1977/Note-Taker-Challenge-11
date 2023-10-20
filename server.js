@@ -1,6 +1,6 @@
 const express = require('express');
-const htmlRoutes = require('./routes/htmlroutes');
-const apiRoutes = require('./routes/apiroutes');
+// const apiRoutes = require('./routes/apiroutes');
+// const htmlRoutes = require('./routes/htmlroutes');
 const path = require('path');
 const fs = require('fs')
 
@@ -58,9 +58,9 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
-// // htmlRoutes.get('*', (req, res) => {
-// //     console.log('GET request for * (catch-all) received');
-// //   res.sendFile(path.join(__dirname, '../public/index.html'))
-// // });
+app.get('*', (req, res) => {
+    console.log('GET request for * (catch-all) received');
+  res.sendFile(path.join(__dirname, './public/index.html'))
+});
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
