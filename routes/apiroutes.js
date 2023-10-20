@@ -3,6 +3,7 @@ const path = require('path');
 const uuid = require('../helpers/uuid');
 const apiRoutes = require('express').Router();
 
+//this pulls exisiting data from db.json, this is used in concert with a fetch function on the front end to render previously saved notes
 apiRoutes.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
     fs.readFile(path.join(__dirname, '../db/db.json'), "utf8", (err, data) => {
@@ -14,6 +15,7 @@ apiRoutes.get('/notes', (req, res) => {
     });
 })
 
+// this takes new note enties and adds them to db.json
 apiRoutes.post('/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
     const { title, text, id } = req.body;
@@ -21,7 +23,7 @@ apiRoutes.post('/notes', (req, res) => {
         const newNote = {
             title,
             text,
-            id: uuid(),
+            id: uuid(), //assigns a random, unique number value
         };
         const noteString = JSON.stringify(newNote);
         fs.readFile("./db/db.json", "utf8", (err, data) => {
