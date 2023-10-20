@@ -95,21 +95,11 @@ const handleNoteDelete = (e) => {
   });
 };
 
-let clickedNote;
-
 // Sets the activeNote and displays it
 const handleNoteView = (e) => {
   e.preventDefault();
-  clickedNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
+  activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
   renderActiveNote();
- 
-  if(clickedNote && clickedNote.title) {
-    noteTitle.value = clickedNote.title;
-    noteText.value = clickedNote.text;
-  } else {
-    noteTitle.value = '';
-    noteText.value = '';
-  }
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note

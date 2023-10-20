@@ -1,14 +1,22 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text"
-  },
-  {
     "title": "Mow the lawn",
     "text": "She's too long"
   },
   {
     "title": "Pick up groceries",
     "text": "Num Nums"
+  },
+  {
+    "title": "Finish my homework",
+    "text": "Hopefully tonight"
+  },
+  {
+    "title": "Start the laundry",
+    "text": "and you thought I forgot"
+  },
+  {
+    "title": "Start bonus task?",
+    "text": "do I have time"
   }
 ]
